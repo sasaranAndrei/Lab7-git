@@ -27,7 +27,7 @@ public class Fraction implements Numeric {
     }
 
     public String toString(){
-        return this.numerator + "/" + this.denominator + "\n";
+        return this.numerator + "/" + this.denominator;
     }
 
     @Override
@@ -37,4 +37,5 @@ public class Fraction implements Numeric {
         ((Fraction) result).denominator = this.denominator * ((Fraction)n).denominator;
         return result;
     }
+
 }

@@ -29,6 +29,10 @@ public class Complex implements Numeric{
         this.imag = imag;
     }
 
+    public String toString (){
+        return "(" + this.real + "," + this.imag + "i)";
+    }
+
     public Complex addComplex (Complex a){
         Complex sum = new Complex(0.0,0.0);
         sum.real = this.real + a.real;

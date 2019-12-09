@@ -1,27 +1,20 @@
 package lab7;
 
 public class MainClass {
-    public static void main (String[] args){
-        Complex c = new Complex(1.0,2.0);
-        Complex d = new Complex (0.0,1.0);
-
-        c.printComplex();
-        System.out.println();
-        d.printComplex();
-        System.out.println();
-
-        Numeric w = c.multiply(d);
-        if (w instanceof Complex){
-            ((Complex) w).printComplex();
-            System.out.println();
-        }
-        System.out.println();
-
+    public static void main (String[] args) {
+        Complex c = new Complex(1.0, 2.0);
+        Complex d = new Complex(0.0, 1.0);
         Fraction f = new Fraction(2,3);
         Fraction g = new Fraction(4,7);
-        Numeric result = ((Fraction)f).multiply((Fraction)g);
-        System.out.println(((Fraction)result).toString());
 
+        MatrixNumeric mn = new MatrixNumeric(2,2);
+        mn.addElement(c, 0, 0);
+        mn.addElement(d, 0, 1);
+        mn.addElement(f, 1, 0);
+        mn.addElement(g, 1, 1);
+        System.out.println(mn);
         System.out.println();
+        mn.addElement(c.mulComplex(d),1,0);
+        System.out.println(mn);
     }
 }
